@@ -25,6 +25,11 @@ public class CharList {
 			current.next= node;
 		}
 	}
+	public void dequeue(char character)
+	{
+		
+	}
+	
 	
 	
 	//Returns list of characters as a string 
