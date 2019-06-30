@@ -13,10 +13,21 @@ public class EnqueueChar {
  CList.enqueue('d');
  CList.enqueue('d');
  CList.enqueue('d');
+
  
- 	if (CList.length() >10)
+ 	
+ 	//	if (CList >10)
+ 	//	throw Limit10;
  
  System.out.println(CList);
+ 
+ CList.dequeue();
+ 
+ System.out.println(CList);
+ 
+ 
+ 
+ 
 	
 	
 	

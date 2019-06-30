@@ -3,12 +3,12 @@ import org.omg.CORBA.Current;
 
 public class CharList {
 	private CharNode list;
-	
+	private int j;
 	public CharList()
 	{
-		list = null;
+		char list[] = null;
 	}
-	
+
 	
 	public void enqueue(char character)
 	{
@@ -25,9 +25,24 @@ public class CharList {
 			current.next= node;
 		}
 	}
-	public void dequeue(char character)
+	public void dequeue()
 	{
+		char character= ' ';
+		CharNode node = null;
+		CharNode current;
 		
+		if (list == null)
+			System.out.println("Cannot execute dequeue");
+		else
+		{
+		
+			current = list;
+			while (current.prev != null)
+			{
+				current = current.prev;
+				current.prev= node;
+			}
+		}
 	}
 	
 	
@@ -48,17 +63,22 @@ public class CharList {
 	private class CharNode
 	{
 		public char Character;
-		public CharNode next;
+		public CharNode next, prev;
 		
 		public CharNode (char character)
 		{
 			Character = character;
 			next = null;
+			prev = null;
 		}
 	}
-
-	
-		// TODO Auto-generated method stub
-		return 0;
+	public int size(int SIZE)
+	{
+		CharList[int size];
+		size = SIZE;
+		return SIZE;
 	}
 }
+	
+		
+	
