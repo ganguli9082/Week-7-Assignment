@@ -28,7 +28,7 @@ public class CharList {
 	public void dequeue()
 	{
 		char character= ' ';
-		CharNode node = null;
+		CharNode node;
 		CharNode current;
 		
 		if (list == null)
@@ -40,7 +40,7 @@ public class CharList {
 			while (current.prev != null)
 			{
 				current = current.prev;
-				current.prev= node;
+				current.prev= null;
 			}
 		}
 	}
